@@ -1,0 +1,23 @@
+Kubernetes
+
+1.to solve issue of UnSupported issue
+    project  ==>Properties==> Java Compliance
+	kubectl get svc --watch
+	
+	kubectl create deployment currency-exchange --image=kubernates/mmv2-currency-exchange-service:mmv2-currency-exchange-service
+	kubectl expose deployment currency-exchange --type=LoadBalancer --port=8000
+	
+	curl http://ip//url
+	
+	CURRENCY_EXCHANGE_SERVICE_HOST - environment variable automatically created  by kubernates when launch of new pods
+	
+	->get deployment in yaml
+	kubectl get deployment currency-exchange -o yaml
+	->to save deployment into yaml file
+	kubectl get deployment currency-exchange -o yaml >> deployment.yaml
+	
+	->to see difference in ymal file
+	kubectl diff -f deployment.yaml
+	-> to apply the file configurations
+	kubectl apply -f deployment.yaml
+	
